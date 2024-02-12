@@ -26,7 +26,7 @@ def get_today_post():
     file_name = f"Day {current_day_of_week}.txt"
 
     # Path to the file
-    file_path = os.path.join("/twitter_post", current_month,
+    file_path = os.path.join("twitter_post", current_month,
                              week_folder_name, file_name)
     print(file_path)
     # Check if the file exists
@@ -41,17 +41,14 @@ def get_today_post():
 # Настройка аутентификации
 auth = OAuth1(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-post = get_today_post()
-# Текст твита
-tweet_data = {
-    'text': post
-}
-
 
 def posting():
-    if post is not None:
+    tweet_datas = {
+        'text': get_today_post()
+    }
+    if tweet_datas is not None:
         # Отправка твита
-        response = requests.post(ENDPOINT_URL, json=tweet_data, auth=auth)
+        response = requests.post(ENDPOINT_URL, json=tweet_datas, auth=auth)
 
         # Проверка ответа
         if response.status_code == 201:
