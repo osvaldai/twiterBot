@@ -7,10 +7,10 @@ import os
 from datetime import datetime
 
 # Учетные данные приложения из Twitter Developer Console
-CONSUMER_KEY = '7TO8R6nmFNfAJbmeThuQ0Geqn'
-CONSUMER_SECRET = 'kqkmPBVxKn2reqhLicHm6bRn5oEtKWbNk4mSUXveGUPeaqZDu0'
-ACCESS_TOKEN = '1507341116278198275-yAEtmztEc0MIKdosdAl1U4SrjDvFcr'
-ACCESS_TOKEN_SECRET = 'b0hOB0rIadRhlFGugtTJNnVQIos0RF6Aid462eu9zTLID'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_TOKEN = ''
+ACCESS_TOKEN_SECRET = ''
 
 # Эндпоинт Twitter API v2 для отправки твитов
 ENDPOINT_URL = 'https://api.twitter.com/2/tweets'
